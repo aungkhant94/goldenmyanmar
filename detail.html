@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Golden Myanmar Academy</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="icon" type="image/png" href="images/title.png">
+<!-- favicons -->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/custom-responsive-style.css">
+<script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="scripts/plugin-active.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
+<script type="text/javascript">
+  $('document').ready(function(){
+      var modal = document.getElementById("myModal");
+      
+      $('.close').click(function() {
+        modal.style.display = "none";
+      });
+
+      $('.login-label').click(function() {
+        modal.style.display = "block";
+      });
+
+      setTimeout(function(){ 
+        var onscrollhide  = $('#onscrollhide').val();
+        if(onscrollhide == 1){
+          modal.style.display = "block";
+          $('#scrollable').val(1);
+        }
+      }, 5000);
+
+
+
+      $(window).scroll(function() {
+        var onscrollhide  = $('#onscrollhide').val();
+        var scrollable  = $('#scrollable').val();
+        if(onscrollhide == 1){
+          if(scrollable == 0){
+             modal.style.display = "none";
+          }
+          $('#onscrollhide').val(0);
+        }
+      });
+  })
+</script>
+</head>
+<body>
+  <input type="hidden" value="1" id ="onscrollhide">
+  <input type="hidden" value="0" id ="scrollable">
+  <header>
+    <div class="mobile-logo">
+    <a href=""><img src="images/gmaLogo.png"></a>
+  </div>
+  <a class="menu-toggle rounded" href="#">
+    <i class="fa fa-bars"></i>
+  </a>
+  <div class="login-toggle">
+    <label class="login-label">Login</label>
+  </div>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="smooth-scroll" href="#Header"></a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#Services">Field</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#OurWork">Course</a>
+      </li>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#Contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  </header>
+  <section>
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">IT</li>
+                <li class="breadcrumb-item active" aria-current="page">Coumputer Basic</li>
+              </ol>
+            </nav>
+          <h3>Computer Basic Course</h3>
+          <p>
+            Become a computer professional
+          </p>  
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
+            <img src="./images/GMA Course.png" style="width: 100%;" >
+          </div>
+        </div>
+        <div class="row">
+           <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+              <h4>What u'll learn</h4>
+           </div> 
+        </div>
+    </div>
+  </section> 
+ <div class="copyright">
+ <table style="margin:0;">
+        <tbody><tr>
+        <td width="40%" align="right"><p>
+          Powered by
+          </p></td>
+        <td width="20%" style="text-align: center;"><img src="images/Marvellous_logo.png" width="80%"></td>
+        <td width="5%"><p class="left">© <span class="footer-year"></span></p></td>
+        <td width="35%"><p class="left"></td>
+        </tr>
+        
+        </tbody></table>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <div class="modal-header">
+    <h2>Golden Myanmar Academy</h2>
+    <span class="close" style="color : #daa521">&times;</span>
+  </div>
+  <div class="modal-body">
+    <div class="form">
+    <form action="https://sms.goldenmyanmar.cloud/j_spring_security_check" method="POST">
+      <input type="hidden" id="schoolId" name="schoolId" value="11">
+      <div class="login-logo">
+        <img src="images/title.png" style="width: 100px;height: 100px">
+      </div>
+      <div style="text-align: center;">
+        <label class= "label-login">Login</label>
+      </div>
+      <div class="login-input">
+         <input type="text" required="" id="j_username" name="j_username">
+         <label>Login ID</label>
+      </div>
+      <br>
+      <div class="login-input">
+        <input type="Password" required="" id="j_password" name="j_password">
+        <label>Password</label>
+      </div>
+      <div style="text-align: center;">
+        <input type="submit" name="" class="login-btn"  required="" value="Login">
+      </div>
+      </form>
+    </div>
+  </div>
+  <!-- <div class="modal-footer">
+    <h3>Modal Footer</h3>
+  </div> -->
+  </div>
+</div>
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v9.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/my_MM/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="100237295299740"
+  logged_in_greeting="သင်တန်းစုံစမ်းရန်"
+  logged_out_greeting="သင်တန်းစုံစမ်းရန်">
+      </div>
+</body>
+</html>
